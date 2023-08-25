@@ -1,0 +1,37 @@
+body {
+    padding: 0 20px;
+    background-image: url('../../images/FL1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+
+.songs-text {
+    background-color: rgba(85, 239, 196, 0.7);
+}
+
+.check-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.check-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: rgba(76, 209, 55,0.8);
+    color: white;
+    border: none;
+    font-size: 24px;
+}
+.check-btn:hover {
+    background: rgba(76, 209, 55,1);
+}

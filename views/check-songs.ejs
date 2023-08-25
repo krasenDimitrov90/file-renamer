@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist maker</title>
+    <link rel="stylesheet" href="/css/songs/check-songs.css">
+    <link rel="stylesheet" href="/css/songs/playlist.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="new-playlist-container">
+            <h2>New playlist</h2>
+                <% if (newSongs.length === 0) { %>
+                    <li>There is no changes yet</li>
+                <% } else { %>
+                    <div class="album-name">
+                        <h3><%= newSongs[0] %></h3>
+                    </div>
+                <table class="playlist new-playlist">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Track</th>
+                        </tr>
+                    </thead>
+                    <% newSongs.slice(1).forEach((song, i) => {  %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= song %></td>
+                        </tr>
+                    <% }) %>
+                </table>
+                <% } %>
+            <!-- <ul class="new-playlist">
+                <% if (newSongs.length === 0) { %>
+                    <li>There is no changes yet</li>
+                <% } else { %>
+                    <li><%= newSongs[0] %></li>
+                    <% newSongs.slice(1).forEach((song, i) => {  %>
+                        <li><%= song %></li>
+                    <% }) %>
+                <% } %>
+            </ul> -->
+        </div>
+        <div class="btns-container">
+            <form action="/save-changes" method="POST">
+                <textarea name="songs" style="display:none;"><%= newSongs.join('\n') %></textarea>
+                <button class="submit-btn">SAVE CHANGES</button>
+            </form>
+            <div >
+                <a class="discard-btn" href="/">DISCARD CHANGES</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

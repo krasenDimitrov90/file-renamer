@@ -1,0 +1,66 @@
+body {
+    padding: 0 20px;
+    background-image: url('../../images/FL1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 300px;
+}
+
+.album-name {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(50, 199, 157, 0.712);
+}
+
+.submit-btn, 
+.discard-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    flex: 1;
+    border: 1px solid 4bb39b;
+    font-weight: 800;
+    color: white;
+}
+
+.submit-btn {
+    background-color: #0be881;
+}
+.submit-btn:hover {
+    background-color: #05c46b;
+
+}
+
+.discard-btn {
+    background-color: #f53b57;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.discard-btn:hover {
+    background-color: #df1a37;
+}
+
+.btns-container {
+    margin-top: 20px;
+    display: flex;
+}
+
+.btns-container form,
+.btns-container div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.btns-container form:nth-child(1) {
+    margin-right: 200px;
+}

@@ -1,0 +1,40 @@
+.new-playlist-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist.new-playlist {
+    margin: 0;
+}
+
+.playlist.new-playlist th:last-child {
+    text-align: left;
+}
+
+
+.playlist {
+    margin-right: 10px;
+    flex: 1;
+    background-color: rgba(85, 239, 196, 0.7);
+}
+
+.playlist tr {
+    background-color: #00a8ff;
+}
+
+.playlist tbody tr:nth-child(odd) {
+    background-color: rgba(85, 239, 196, 0.7);
+}
+
+.playlist tbody tr:nth-child(even) {
+    background-color: rgba(50, 199, 157, 0.712);
+}
+
+.playlist tbody tr td:first-child {
+    text-align: center;
+}
+
+.playlist tr td,
+.playlist tr th {
+    padding: 5px 10px;
+}

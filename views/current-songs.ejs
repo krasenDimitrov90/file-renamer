@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist maker</title>
+    <link rel="stylesheet" href="/css/songs/current-songs.css">
+    <link rel="stylesheet" href="/css/songs/playlist.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="playlist-container">
+            <h2>Old playlist</h2>
+            <table class="playlist">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Track</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% songs.forEach((song, i)=> { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= song %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+
+            </table>
+        </div>
+        <form class="text-container" method="POST" action="/check-songs">
+            <h2>Enter text here</h2>
+            <textarea class="songs-text" name="songs-text" id="songs" rows="20" cols="100"></textarea>
+            <div class="check-btn-container">
+                <button class="check-btn">CHECK</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
