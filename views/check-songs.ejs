@@ -34,16 +34,6 @@
                     <% }) %>
                 </table>
                 <% } %>
-            <!-- <ul class="new-playlist">
-                <% if (newSongs.length === 0) { %>
-                    <li>There is no changes yet</li>
-                <% } else { %>
-                    <li><%= newSongs[0] %></li>
-                    <% newSongs.slice(1).forEach((song, i) => {  %>
-                        <li><%= song %></li>
-                    <% }) %>
-                <% } %>
-            </ul> -->
         </div>
         <div class="btns-container">
             <form action="/save-changes" method="POST">

@@ -1,0 +1,35 @@
+body {
+    padding: 0 20px;
+    background-image: url('../../images/404.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-heading {
+    margin: 50px 0;
+    font-size: 100px;
+}
+
+.home-page-button {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgba(85, 239, 196, 0.7);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    box-shadow: 1px 1px 4px 4px #888888;
+}
+
+.home-page-button:hover {
+    cursor: pointer;
+    background-color: rgba(72, 204, 166, 0.7);
+}

@@ -38,6 +38,7 @@ module.exports.saveChanges = (req, res, next) => {
         try {
             const files = await fsPromise.readdir(folderPath);
 
+            console.log(files.length, songs.length)
             if (files.length !== songs.length || songs.some(s => s === '')) {
                 const error = {
                     statusCode: 404,
