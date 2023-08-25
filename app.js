@@ -11,7 +11,6 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(routes);
 
 
 app.use((error, req, res, next) => {
@@ -20,6 +19,7 @@ app.use((error, req, res, next) => {
     res.render('404', { message });
 })
 
+app.use(routes);
 
 app.listen(3000, () => {
     console.log('Server is running, access on http://localhost:3000');
