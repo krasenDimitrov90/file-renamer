@@ -14,11 +14,21 @@
     <div class="main-container">
         <div class="folders-container" >
             <% folders.forEach(f => { %>
-                <div class="folder-wraper">
+                <form action="/songs" method="GET" class="folder-wraper">
                     <div class="folder-svg"></div>
                     <div class="folder-text-container">
-                        <p><%= f %></p>
+                        <p class="folder-text"><%= f %></p>
                     </div>
+                    <button class="submit-btn"></button>
+                </form>
+            <% }) %>
+            <% otherTypes.forEach(f => { %>
+                <div class="folder-wraper">
+                    <div class="file-svg"></div>
+                    <div class="folder-text-container">
+                        <p class="folder-text"><%= f %></p>
+                    </div>
+                    <!-- <button class="submit-btn"></button> -->
                 </div>
             <% }) %>
         </div>

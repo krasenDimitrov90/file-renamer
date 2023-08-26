@@ -3,3 +3,9 @@
     height: 30px;
     background-image: url('../svg/icons8-folder-48.svg');
 }
+
+.file-svg {
+    width: 30px;
+    height: 30px;
+    background-image: url('../svg/icons8-file.svg');
+}
