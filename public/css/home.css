@@ -1,0 +1,44 @@
+body {
+    padding: 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background_image {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-image: url('../../images/FL1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.folders-container {
+    width: 500px;
+    height: 300px;
+    background: rgba(3, 169, 244,0.5);
+    overflow-y: auto;
+}
+
+.folder-wraper {
+    display: flex;
+}
+.folder-wraper:hover {
+    cursor: pointer;
+    background: rgba(33, 150, 243,1.0);
+
+}
+.folder-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
