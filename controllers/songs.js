@@ -4,7 +4,7 @@ const path = require('path');
 const NodeID3 = require('node-id3');
 
 module.exports.getCurrentSongs = (req, res, next) => {
-    const folderPath = path.join(__dirname, '../', req.params['0'].replace('/songs/', ''));
+    const folderPath = path.join(__dirname, '../../', req.params['0'].replace('/songs/', ''));
     // const folderPath = path.join(__dirname, '../', 'music');
 
     let files = [];
