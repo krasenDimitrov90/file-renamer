@@ -4,19 +4,32 @@ const path = require('path');
 const NodeID3 = require('node-id3');
 
 module.exports.getCurrentSongs = (req, res, next) => {
-    const folderPath = path.join(__dirname, '../', 'music');
+    const folderPath = path.join(__dirname, '../', req.params['0'].replace('/songs/', ''));
+    // const folderPath = path.join(__dirname, '../', 'music');
 
-    const files = fs.readdirSync(folderPath)
-        .map(function (v) {
-            return {
-                name: v,
-                time: fs.statSync(folderPath + '/' + v).mtime.getTime()
-            };
-        })
-        .sort(function (a, b) { return a.time - b.time; })
-        .map(function (v) { return v.name; });
-
-    res.render('current-songs', { songs: files, newSongs: [] });
+    let files = [];
+    (async function () {
+        try {
+            files = await fsPromise.readdir(folderPath);
+    
+            files
+            .map(function (v) {
+                return {
+                    name: v,
+                    time: fs.statSync(folderPath + '/' + v).mtime.getTime()
+                };
+            })
+            .sort(function (a, b) { return a.time - b.time; })
+            .map(function (v) { return v.name; });
+    
+        res.render('current-songs', { songs: files, newSongs: [] });
+            
+        } catch (err) {
+            console.log('<<<<<' ,err, '>>>>>')
+    
+            next({message: 'There is no such folder!'})
+        }
+    })()
 };
 
 module.exports.checkSongs = (req, res, next) => {

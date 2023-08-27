@@ -6,7 +6,7 @@
     <title>Playlist maker</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/svg.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/folders.css">
 </head>
 <body>
     <div class="background_image">
@@ -14,7 +14,7 @@
     <div class="main-container">
         <div class="folders-container" >
             <% folders.forEach(f => { %>
-                <form action="/songs" method="GET" class="folder-wraper">
+                <form action="<%= folderPath + f %>/" method="POST" class="folder-wraper">
                     <div class="folder-svg"></div>
                     <div class="folder-text-container">
                         <p class="folder-text"><%= f %></p>
@@ -28,9 +28,11 @@
                     <div class="folder-text-container">
                         <p class="folder-text"><%= f %></p>
                     </div>
-                    <!-- <button class="submit-btn"></button> -->
                 </div>
             <% }) %>
+        </div>
+        <div>
+            <a href="/songs<%= folderPath %>" class="edit-btn">EDIT FILES</a>
         </div>
     </div>
 </body>

@@ -12,14 +12,15 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(routes);
 
 app.use((error, req, res, next) => {
+    console.log('<<<<<<<<<<<<IN EEEEEEEEEEEEEERRRRRRRRRRRRRRRROOOOOOOOOOOOORRRRRRRR')
     const status = error.statusCode || 500;
     const message = error.message || 'Something went wrong!';
     res.render('404', { message });
 })
 
-app.use(routes);
 
 app.listen(3000, () => {
     console.log('Server is running, access on http://localhost:3000');
