@@ -14,7 +14,7 @@
     <div class="main-container">
         <div class="folders-container" >
             <% folders.forEach(f => { %>
-                <form action="<%= folderPath + f %>/" method="POST" class="folder-wraper">
+                <form action="<%= folderPath + f %>/" method="GET" class="folder-wraper">
                     <div class="folder-svg"></div>
                     <div class="folder-text-container">
                         <p class="folder-text"><%= f %></p>
