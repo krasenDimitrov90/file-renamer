@@ -39,11 +39,12 @@
         </div>
         <div class="btns-container">
             <form action="/save-changes" method="POST">
+                <input type="hidden"  name="folder" value=<%= folder %> >
                 <textarea name="songs" style="display:none;"><%= newSongs.join('\n') %></textarea>
                 <button class="submit-btn">SAVE CHANGES</button>
             </form>
             <div >
-                <a class="discard-btn" href="/">DISCARD CHANGES</a>
+                <a class="discard-btn" href="/<%= folder %>">DISCARD CHANGES</a>
             </div>
         </div>
     </div>

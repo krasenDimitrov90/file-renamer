@@ -4,8 +4,8 @@ const path = require('path');
 const NodeID3 = require('node-id3');
 
 module.exports.getCurrentSongs = (req, res, next) => {
-    const folderPath = path.join(__dirname, '../../', req.params['0'].replace('/songs/', ''));
-    // const folderPath = path.join(__dirname, '../', 'music');
+    const folder =  req.params['0'].replace('/songs/', '')
+    const folderPath = path.join(__dirname, '../../', folder);
 
     let files = [];
     (async function () {
@@ -22,11 +22,9 @@ module.exports.getCurrentSongs = (req, res, next) => {
             .sort(function (a, b) { return a.time - b.time; })
             .map(function (v) { return v.name; });
     
-        res.render('current-songs', { songs: files, newSongs: [] });
+        res.render('current-songs', { songs: files, folder: folder });
             
         } catch (err) {
-            console.log('<<<<<' ,err, '>>>>>')
-    
             next({message: 'There is no such folder!'})
         }
     })()
@@ -34,19 +32,22 @@ module.exports.getCurrentSongs = (req, res, next) => {
 
 module.exports.checkSongs = (req, res, next) => {
     const songs = req.body['songs-text'].split('\n');
+    const folder = req.body.folder;
+    console.log(folder)
 
     res.render('check-songs', {
-        newSongs: songs
+        newSongs: songs, folder
     });
 };
 
 module.exports.saveChanges = (req, res, next) => {
     const songs = [...new Set(req.body.songs.split('\n').map(s => s.replace('\r', '')))];
     const album = songs.shift();
+    const folder = req.body.folder;
 
     (async function () {
 
-        const folderPath = path.join(__dirname, '../', 'music');
+        const folderPath = path.join(__dirname, '../../', folder);
 
         try {
             const files = await fsPromise.readdir(folderPath);
@@ -75,7 +76,7 @@ module.exports.saveChanges = (req, res, next) => {
 
                 idx++;
             }
-            res.redirect('/');
+            res.redirect(`/${folder}`);
 
         } catch (err) {
             next(err);

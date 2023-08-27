@@ -36,6 +36,7 @@
         </div>
         <form class="text-container" method="POST" action="/check-songs">
             <h2>Enter new list here</h2>
+            <input type="hidden"  name="folder" value=<%= folder %> >
             <textarea class="songs-text" name="songs-text" id="songs" rows="20" cols="100"></textarea>
             <div class="check-btn-container">
                 <button class="check-btn">CHECK</button>
