@@ -1,6 +1,14 @@
+.playlist-container,
 .new-playlist-container {
     display: flex;
     flex-direction: column;
+}
+
+.playlist {
+    margin-right: 10px;
+    flex: 1;
+    min-width: 500px;
+    background-color: rgba(85, 239, 196, 0.7);
 }
 
 .playlist.new-playlist {
@@ -9,14 +17,7 @@
 
 .playlist.new-playlist th:last-child {
     text-align: left;
-}
-
-
-.playlist {
-    margin-right: 10px;
-    flex: 1;
-    min-width: 500px;
-    background-color: rgba(85, 239, 196, 0.7);
+    /* max-width: 50%; */
 }
 
 .playlist tr {
@@ -38,4 +39,10 @@
 .playlist tr td,
 .playlist tr th {
     padding: 5px 10px;
+}
+
+.playlist tr td {
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    overflow: hidden;
 }
