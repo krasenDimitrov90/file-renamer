@@ -35,27 +35,39 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     flex: 1;
-    border: 1px solid 4bb39b;
-    font-weight: 800;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 600;
     color: white;
 }
 
 .submit-btn {
-    background-color: #0be881;
+    /* width: 200px; */
+
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, #27ae60 50%, #05c46b 50%);
+    -webkit-transition: background-position 0.3s;
+    -moz-transition: background-position 0.3s;
+    transition: background-position 0.3s;
 }
 .submit-btn:hover {
-    background-color: #05c46b;
+    background-position: -100% 0%;
 
 }
 
 .discard-btn {
-    background-color: #f53b57;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, #df1a37 50%, #f53b57 50%);
+    -webkit-transition: background-position 0.3s;
+    -moz-transition: background-position 0.3s;
+    transition: background-position 0.3s;
     display: flex;
     justify-content: center;
     text-decoration: none;
 }
 .discard-btn:hover {
-    background-color: #df1a37;
+    background-position: -100% 0%;
 }
 
 .btns-container {

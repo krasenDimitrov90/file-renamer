@@ -14,6 +14,21 @@ body {
     top: 0;
     left: 0;
     margin: 20px;
+    display: flex;
+
+}
+
+.go-back-form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.back-btn-container {
+    position: relative;
+    width: 54px;
+    height: 54px;
 }
 
 .background_image {
@@ -43,7 +58,6 @@ body {
 .folder-wraper:hover {
     cursor: pointer;
     background: rgba(33, 150, 243,1.0);
-
 }
 .folder-text-container {
     display: flex;

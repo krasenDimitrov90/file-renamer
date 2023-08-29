@@ -11,7 +11,13 @@
 </head>
 <body>
     <form class="go-back-form" action="<%= folderPath.split('/').slice(0, -2).join('/') %>/" method="GET">
-        <button class="go-back-btn" >GO BACK</button>
+        <div class="back-btn-container">
+            <button class="back-btn-svg" ></button>
+            <!-- <button class="back-btn-svg-overlay" ></button> -->
+        </div>
+        <!-- <div class="go-back-form-text">
+            <p>GO BACK</p>
+        </div> -->
     </form>
     <div class="background_image">
     </div>

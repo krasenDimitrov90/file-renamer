@@ -11,3 +11,46 @@
     height: 30px;
     background-image: url('../svg/icons8-file.svg');
 }
+
+.back-btn-svg {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-image: url('../svg/arrow-left-circle-fill.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+}
+
+@keyframes rotate {
+    100% {transform: rotate(360deg);}
+  }
+
+.back-btn-svg:hover {
+    animation: rotate 0.5s;
+    width: 66px;
+    height: 66px;
+    background-image: url('../svg/arrow-left-circle-fill-hover.svg');
+}
+
+.back-btn-svg-overlay {
+    cursor: pointer;
+    background-image: url('../icons/icons8-back-arrow-54-hover.png');
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.back-btn-container:hover .back-btn-svg-overlay {
+    width: 100%;
+}
