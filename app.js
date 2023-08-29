@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 app.use((error, req, res, next) => {
-    console.log('<<<<<<<<<<<<IN EEEEEEEEEEEEEERRRRRRRRRRRRRRRROOOOOOOOOOOOORRRRRRRR')
+    // console.log('<<<<<<<<<<<<IN EEEEEEEEEEEEEERRRRRRRRRRRRRRRROOOOOOOOOOOOORRRRRRRR')
     const status = error.statusCode || 500;
     const message = error.message || 'Something went wrong!';
     res.render('404', { message });
