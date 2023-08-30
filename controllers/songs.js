@@ -33,7 +33,6 @@ module.exports.getCurrentSongs = (req, res, next) => {
 module.exports.checkSongs = (req, res, next) => {
     const songs = req.body['songs-text'].split('\n');
     const folder = req.body.folder;
-    console.log(folder)
 
     res.render('check-songs', {
         newSongs: songs, folder
