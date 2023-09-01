@@ -72,6 +72,6 @@ If saved check the Music folder you will see this:
 ![Screenshot](screenshots/music-folder-after.PNG)
 
 All files are renamed, and it is added a ID3 tags for
-    - # 
-    - Author
-    - Title
+- "#" 
+- Author
+- Title
