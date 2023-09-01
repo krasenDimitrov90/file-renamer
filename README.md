@@ -28,10 +28,19 @@ npm install
 
 ## Start the app
 
-Open the terminal and navigate to the root folder of the app ( ../playlist-maker )
+Let's say you place the app folder on the Desctop
+Open the terminal and navigate to the root folder of the app 
+( C:\Users\User-name\OneDrive\Desktop\playlist-maker/playlist-maker )
 and run the command: 
 
 ```console
 npm start
 ```
 App can be accessed on http://localhost:3000
+
+## How it works
+
+If the app folder is on the Desktop when accessing http://localhost:3000 it will load
+all files that are on the Desctop
+
+![Screenshot](screenshots/home-page.PNG)
