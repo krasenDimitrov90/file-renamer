@@ -44,3 +44,34 @@ If the app folder is on the Desktop when accessing http://localhost:3000 it will
 all files that are on the Desctop
 
 ![Screenshot](screenshots/home-page.PNG)
+
+In this example our song are in Music folder , so we click on that folder 
+
+![Screenshot](screenshots/music-files-before.PNG)
+
+If we look in the folder it wood be like this:
+
+![Screenshot](screenshots/music-folder-before.PNG)
+
+Click on EDIT FILES button
+
+![Screenshot](screenshots/renaming-area.PNG)
+
+In the text area under "Enter new list here" on the first line write the Album name
+and on all ather lines enter the desired names for the songs. The lines for the songs
+has to be as much as the songs count in the folder.
+When ready click the check button
+
+![Screenshot](screenshots/check-area.PNG)
+
+You will see example of how would be renamed the songs
+From here you can choose wether to save the changes or not.
+
+If saved check the Music folder you will see this:
+
+![Screenshot](screenshots/music-folder-after.PNG)
+
+All files are renamed, and it is added a ID3 tags for
+    - # 
+    - Author
+    - Title
