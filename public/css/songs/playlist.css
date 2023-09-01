@@ -2,47 +2,85 @@
 .new-playlist-container {
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
 }
 
-.playlist {
-    margin-right: 10px;
-    flex: 1;
+.new-playlist-container {
+    margin: 0;
+}
+
+.scroll-table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
     min-width: 500px;
     background-color: rgba(85, 239, 196, 0.7);
 }
 
-.playlist.new-playlist {
-    margin: 0;
+.scroll-table-container p {
+    margin: 1px;
 }
 
-.playlist.new-playlist th:last-child {
-    text-align: left;
-    /* max-width: 50%; */
-}
-
-.playlist tr {
-    background-color: #00a8ff;
-}
-
-.playlist tbody tr:nth-child(odd) {
-    background-color: rgba(85, 239, 196, 0.7);
-}
-
-.playlist tbody tr:nth-child(even) {
-    background-color: rgba(50, 199, 157, 0.712);
-}
-
-.playlist tbody tr td:first-child {
+.scroll-table-head p:last-child {
+    margin-right: 0;
     text-align: center;
 }
 
-.playlist tr td,
-.playlist tr th {
-    padding: 5px 10px;
+.scroll-table-head,
+.scroll-table-body {
+    display: flex;
+    flex-direction: column;
 }
 
-.playlist tr td {
-    text-overflow: ellipsis;
-    /* white-space: nowrap; */
-    overflow: hidden;
+.scroll-table-body {
+    max-height: 428px;
+    overflow-y: auto;
+}
+
+.scroll-table-container.new-list .scroll-table-body{
+    max-height: 350px;
+}
+
+.scroll-table-body::-webkit-scrollbar {
+    width: 16px;
+}
+
+.scroll-table-body::-webkit-scrollbar-track {
+    background-color: #131720;
+}
+
+.scroll-table-body::-webkit-scrollbar-thumb {
+    background-color: rgba(33, 150, 243,1.0);
+}
+
+.scroll-table-row {
+    display: flex;
+}
+
+.scroll-table-row p:first-child {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-table-row p:last-child {
+    flex: 1;
+}
+
+.scroll-table-row p {
+    padding: 5px;
+}
+
+.scroll-table-head p {
+    background-color: #00a8ff;
+}
+
+.scroll-table-body div:nth-child(odd) p{
+    background-color: rgba(85, 239, 196, 0.7);
+}
+
+.scroll-table-body div:nth-child(even) p{
+    background-color: rgba(50, 199, 157, 0.712);
 }

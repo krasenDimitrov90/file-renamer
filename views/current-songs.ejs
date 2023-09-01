@@ -23,24 +23,25 @@
     <div class="main-container">
         <div class="playlist-container">
             <h2>Old playlist</h2>
-            <table class="playlist">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Track</th>
-                    </tr>
-                </thead>
-                <tbody>
+            
+            <div class="scroll-table-container" >
+                <div class="scroll-table-head">
+                    <div class="scroll-table-row">
+                        <p>#</p>
+                        <p>Track</p>
+                    </div>
+                </div>
+                <div class="scroll-table-body">
                     <% songs.forEach((song, i)=> { %>
-                        <tr>
-                            <td><%= i + 1 %></td>
-                            <td><%= song %></td>
-                        </tr>
+                        <div class="scroll-table-row">
+                            <p><%= i + 1 %></p>
+                            <p><%= song %></p>
+                        </div>
                     <% }) %>
-                </tbody>
-
-            </table>
+                </div>
+            </div>
         </div>
+        
         <form class="text-container" method="POST" action="/check-songs">
             <h2>Enter new list here</h2>
             <input type="hidden"  name="folder" value=<%= folder %> >
